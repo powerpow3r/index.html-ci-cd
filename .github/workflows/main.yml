@@ -10,4 +10,12 @@ jobs:
             
       - run: ls -la
 
-      - run: scp -i ${{ secrets.ansible }} ./index.html ubuntu@18.202.28.195:/var/www/html/
+      - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: '18.202.28.195'
+        username: 'ubuntu'
+        key: ${{ secrets.ansible }}
+        port: "22"
+        source: "index.html"
+        target: "/var/www/html/"
