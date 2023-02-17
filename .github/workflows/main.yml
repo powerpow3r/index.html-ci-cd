@@ -15,7 +15,7 @@ jobs:
         with:
           host: '18.202.28.195'
           username: 'ubuntu'
-          key: ${{ secrets.KEY }}
+          key: ${{ secrets.ANSIBLE }}
           port: "22"
           source: "index.html"
           target: "/var/www/html/"
