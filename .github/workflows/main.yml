@@ -10,4 +10,4 @@ jobs:
             
       - run: ls -la
 
-    
+      - run: scp ./index.html ubuntu@18.202.28.195:/var/www/html/
